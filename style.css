@@ -85,7 +85,9 @@ body {
   --primary-color: #646464;
   --secondary-color: #212121;
   --green-button-bg: #37806b;
+  --green-button-bg-hover: #52ab92;
   --beige-button-bg: #caa892;
+  --beige-button-bg-hover: #c39577;
   --quotation-marks-color: #b0855b;
   --input-bg: #eeeeee;
   --section-bg: #f8f8f8;
@@ -140,6 +142,25 @@ body {
   font-size: 16px;
   line-height: 137%;
   text-transform: uppercase;
+  position: relative;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 5px;
+  height: 0;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+}
+.menu__link:hover::after {
+  height: 5px;
+  transition: all 0.3s ease 0s;
 }
 
 .menu__list .menu__item:nth-child(1) .menu__link {
@@ -154,6 +175,11 @@ body {
   padding: 5px 19px;
   background-color: var(--beige-button-bg);
   border-radius: 15px 0px;
+  transition: all 0.3s ease 0s;
+}
+
+.header__button:hover {
+  background-color: #c39577;
 }
 
 .page__main {
@@ -220,6 +246,10 @@ body {
   background-color: var(--green-button-bg);
   text-transform: uppercase;
   font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+.main__left-part-button:hover {
+  background-color: var(--green-button-bg-hover);
 }
 
 .main__right-part {
@@ -445,6 +475,10 @@ body {
   background-color: var(--green-button-bg);
   text-transform: uppercase;
   font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+.about__right-part-text-button:hover {
+  background-color: var(--green-button-bg-hover);
 }
 
 .about-dots {
@@ -515,6 +549,10 @@ body {
   background-color: var(--green-button-bg);
   text-transform: uppercase;
   font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+.successful-work-left-part-button:hover {
+  background-color: var(--green-button-bg-hover);
 }
 
 .successful-work-right-part {
@@ -786,6 +824,7 @@ body {
 .page__blog {
   padding-top: 93px;
   padding-bottom: 122px;
+  position: relative;
 }
 
 .blog {
@@ -867,9 +906,20 @@ body {
   background-color: var(--green-button-bg);
   padding: 13.5px 35px;
   max-width: 271px;
+  transition: all 0.3s ease 0s;
 }
 
+.blog__main-block-item-button:hover {
+  background-color: var(--green-button-bg-hover);
+}
+
+.blog-dots {
+  position: absolute;
+  bottom: -75px;
+  right: 0;
+}
 .page__sign-up {
+  position: relative;
   padding-top: 202px;
   padding-bottom: 192px;
 }
@@ -947,6 +997,16 @@ body {
   background: #37806b;
   border-radius: 0px 0px 20px 0px;
   color: var(--background-color);
+  transition: all 0.3s ease 0s;
+}
+
+.sign-up__body-form-button:hover {
+  background-color: var(--green-button-bg-hover);
+}
+.sign-up-dots {
+  position: absolute;
+  bottom: -75px;
+  left: 0;
 }
 
 .footer {
@@ -991,6 +1051,10 @@ body {
   line-height: 167%;
   color: var(--primary-color);
   opacity: 0.5;
+  transition: opacity 0.3s ease 0s;
+}
+.footer__body-item-menu-link:hover {
+  opacity: 0.9;
 }
 
 .footer__body-item-menu-list .footer__body-item-menu-item:nth-last-child() {
@@ -1003,6 +1067,12 @@ body {
   column-gap: 8px;
 }
 
+.footer__socs a {
+  transition: all 0.3s ease 0s;
+}
+.footer__socs a:hover {
+  transform: scale(1.15);
+}
 .footer__copy {
   border-top: 1px solid #c4c4c4;
   padding: 15px 0 22px 0;
