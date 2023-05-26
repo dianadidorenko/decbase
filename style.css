@@ -200,6 +200,11 @@ body {
   background-color: #c39577;
 }
 
+.burger-menu {
+  display: none;
+}
+
+
 @media (max-width: 1024px) {
   .menu__list {
     -webkit-column-gap: 30px;
